@@ -21,3 +21,4 @@ alias ll='ls -l'
 alias vi=vim
 alias tma='tmux attach'
 alias tml='tmux ls'
+alias c='clear'
