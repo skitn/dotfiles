@@ -13,6 +13,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache.git' 
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/snipmate-snippets.git'
+NeoBundle 'Shougo/vimproc.git'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -22,7 +23,35 @@ NeoBundle 'honza/snipmate-snippets.git'
 "---------------------------------------------------------------------------
 let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'split': ''}
-let g:quickrun_config['_'] = {'outputter/buffer/into' : 1,}
+let g:quickrun_config['_'] = {
+  \ 'outputter/buffer/into' : 1,
+  \ 'runner' : 'vimproc'
+  \ }
+let g:quickrun_config['rspec/bundle'] = {
+  \ 'type' : 'rspec/bundle',
+  \ 'command' : 'rspec',
+  \ 'exec' : 'bundle exec %c %s',
+  \ 'outputter/buffer/filetype' : 'rspec-result',
+  \ 'split' : ''
+  \ }
+let g:quickrun_config['rspec/normal'] = {
+  \ 'type' : 'rspec/normal',
+  \ 'command' : 'rspec',
+  \ 'exec' : '%c %s',
+  \ 'outputter/buffer/filetype' : 'rspec-result',
+  \ 'split' : ''
+  \ }
+function! RSpecQuickrun()
+  let b:quickrun_config = {'type' : 'rspec/normal'}
+  " let b:quickrun_config = {'type' : 'rspec/bundle'}
+endfunction
+
+augroup QrunRSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+
+autocmd BufReadPost *_spec.rb call RSpecQuickrun()
 " ウィンドウを下に開く
 set splitbelow
 nmap <Leader>r <plug>(quickrun)
