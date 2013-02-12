@@ -10,7 +10,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neocomplcache.git' 
+NeoBundle 'Shougo/neosnippet.git'
+NeoBundle 'honza/snipmate-snippets.git'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -29,6 +31,14 @@ nmap <Leader>r <plug>(quickrun)
 " vim-pathogen
 "---------------------------------------------------------------------------
 call pathogen#runtime_append_all_bundles()
+
+"---------------------------------------------------------------------------
+" neocomplcache
+"---------------------------------------------------------------------------
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "---------------------------------------------------------------------------
 " editor setting
