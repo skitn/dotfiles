@@ -8,7 +8,6 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache.git' 
 NeoBundle 'Shougo/neosnippet.git'
@@ -60,9 +59,9 @@ set splitbelow
 nmap <Leader>r <plug>(quickrun)
 
 "---------------------------------------------------------------------------
-" vim-pathogen
+" neosnippet
 "---------------------------------------------------------------------------
-call pathogen#runtime_append_all_bundles()
+let g:neocomplcache_enable_at_startup = 1
 
 "---------------------------------------------------------------------------
 " neocomplcache
@@ -99,3 +98,4 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set number
