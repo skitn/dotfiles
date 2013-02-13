@@ -14,6 +14,9 @@ NeoBundle 'Shougo/neocomplcache.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/snipmate-snippets.git'
 NeoBundle 'Shougo/vimproc.git'
+NeoBundle 'Shougo/unite.git'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimshell'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -70,6 +73,21 @@ imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<P
 smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "---------------------------------------------------------------------------
+" unite
+"---------------------------------------------------------------------------
+" バッファ一覧を表示
+noremap <C-U><C-B> :Unite buffer<CR>
+" ファイル一覧を表示
+noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+" 最近使ったファイル一覧を表示
+noremap <C-U><C-R> :Unite file_mru<CR>
+" レジスタ一覧表示
+noremap <C-U><C-Y> :Unite -buffer-name=register register<CR>
+" ESCキー2回押すと終了
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+"---------------------------------------------------------------------------
 " editor setting
 "---------------------------------------------------------------------------
 syntax on
@@ -77,3 +95,7 @@ syntax on
 set nocompatible
 " ファイル形式検出、プラグイン、インデントを ON
 filetype plugin indent on
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
