@@ -13,7 +13,7 @@ NeoBundle 'Shougo/neocomplcache.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/snipmate-snippets.git'
 NeoBundle 'Shougo/vimproc.git'
-NeoBundle 'Shougo/unite.git'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
 
