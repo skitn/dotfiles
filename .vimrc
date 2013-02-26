@@ -16,6 +16,7 @@ NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'taichouchou2/surround.vim'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -95,7 +96,7 @@ set nocompatible
 " ファイル形式検出、プラグイン、インデントを ON
 filetype plugin indent on
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set number
