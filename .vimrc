@@ -75,14 +75,21 @@ smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<P
 "---------------------------------------------------------------------------
 " unite
 "---------------------------------------------------------------------------
-" バッファ一覧を表示
-noremap <C-U><C-B> :Unite buffer<CR>
-" ファイル一覧を表示
-noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
-" 最近使ったファイル一覧を表示
-noremap <C-U><C-R> :Unite file_mru<CR>
-" レジスタ一覧表示
-noremap <C-U><C-Y> :Unite -buffer-name=register register<CR>
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+
+" バッファ一覧
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+" ファイル一覧
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+" 最近使用したファイル一覧
+nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+" レジスタ一覧
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+" 常用セット
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+" 全部乗せ
+nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 " ESCキー2回押すと終了
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
