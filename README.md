@@ -1,10 +1,12 @@
 dotfiles
 ====
 
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf  
-ln -s ~/dotfiles/.zshrc ~/.zshrc  
-ln -s ~/dotfiles/.zshenv ~/.zshenv  
-ln -s ~/dotfiles/.vimrc ~/.vimrc  
-mkdir -p ~/.vim/bundle/  
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+## Install
+```
+$ git clone https://github.com/skitn/dotfiles.git  
+$ cd dotfiles  
+$ git submodule update -i  
+$ ln -s `pwd`/{.zshenv,.zshrc,.tmux.conf,.vim,.vimrc} ~/
+```
 
+And do `:NeoBundleInstall` in vim
