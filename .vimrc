@@ -21,6 +21,9 @@ NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'wesleyche/Trinity.git'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'scrooloose/nerdtree.git'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -111,6 +114,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set number
+set laststatus=2
+set t_Co=256
 
 "---------------------------------------------------------------------------
 " tab setting
@@ -160,3 +165,11 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+
+"---------------------------------------------------------------------------
+" lightline.vim
+"---------------------------------------------------------------------------
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
+
