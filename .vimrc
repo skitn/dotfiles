@@ -17,6 +17,9 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'vim-scripts/surround.vim'
+NeoBundle 'wesleyche/SrcExpl.git'
+NeoBundle 'wesleyche/Trinity.git'
+NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'scrooloose/nerdtree.git'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
