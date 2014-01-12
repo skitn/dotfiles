@@ -24,6 +24,7 @@ NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'thinca/vim-qfreplace'
 
 "NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -117,6 +118,9 @@ set number
 set laststatus=2
 set t_Co=256
 
+" grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
+autocmd QuickFixCmdPost *grep* cwindow
+
 "---------------------------------------------------------------------------
 " tab setting
 "---------------------------------------------------------------------------
@@ -170,6 +174,6 @@ map <silent> [Tag]p :tabprevious<CR>
 " lightline.vim
 "---------------------------------------------------------------------------
 let g:lightline = {
-  \ 'colorscheme': 'wombat',
+  \ 'colorscheme': 'solarized',
   \ }
 
