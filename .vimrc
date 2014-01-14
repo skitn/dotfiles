@@ -117,6 +117,7 @@ set softtabstop=4
 set number
 set laststatus=2
 set t_Co=256
+set mouse=a
 
 " grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
