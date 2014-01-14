@@ -25,4 +25,6 @@ setopt hist_ignore_dups
 setopt share_history
 
 # private setting
+ZDOTDIR=$HOME
+export ZDOTDIR
 [ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
