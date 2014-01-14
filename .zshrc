@@ -23,3 +23,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups
 setopt share_history
+
+# private setting
+[ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
