@@ -9,7 +9,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache.git' 
+NeoBundle 'Shougo/neocomplete.git' 
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'Shougo/vimproc.git'
@@ -68,12 +68,12 @@ set splitbelow
 nmap <Leader>r <plug>(quickrun)
 
 "---------------------------------------------------------------------------
-" neosnippet
+" neocomplcache
 "---------------------------------------------------------------------------
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 
 "---------------------------------------------------------------------------
-" neocomplcache
+" neosnippet
 "---------------------------------------------------------------------------
 let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
