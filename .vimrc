@@ -123,6 +123,7 @@ set mouse=a
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
+set directory-=.
 
 " grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
