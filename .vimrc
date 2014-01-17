@@ -1,3 +1,7 @@
+" vi との互換性OFF  
+set nocompatible
+filetype off
+
 "---------------------------------------------------------------------------
 " NeoBundle
 "---------------------------------------------------------------------------
@@ -106,8 +110,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 " editor setting
 "---------------------------------------------------------------------------
 syntax on
-" vi との互換性OFF  
-set nocompatible
 " ファイル形式検出、プラグイン、インデントを ON
 filetype plugin indent on
 
@@ -118,9 +120,19 @@ set number
 set laststatus=2
 set t_Co=256
 set mouse=a
+set backspace=indent,eol,start
+set ignorecase
+set smartcase
 
 " grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
+" ファイルを開くたびに、そのファイルのディレクトリに移動する
+autocmd BufEnter * execute ":lcd " . expand("%:p:h")
+
+
+" # の行で改行したときなどに # をつけないように
+autocmd FileType * setlocal formatoptions-=r
+autocmd FileType * setlocal formatoptions-=o
 
 "---------------------------------------------------------------------------
 " tab setting
