@@ -1,6 +1,12 @@
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
-export PATH="$(brew --prefix)/bin:/usr/local/bin:$PATH"
+
+if which brew &> /dev/null; then
+  export PATH="$(brew --prefix)/bin:/usr/local/bin:$PATH"
+else
+  export PATH="/usr/local/bin:$PATH"
+fi
+
 export SHELL=/bin/zsh tmux
 
 # alias
