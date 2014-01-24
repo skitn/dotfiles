@@ -29,9 +29,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-qfreplace'
-
-"NeoBundle 'http://conque.googlecode.com/svn/trunk/', {'directory' :"'conqueterm'}
-"Bundle 'git://git.wincent.com/command-t.git'
+NeoBundle 'w0ng/vim-hybrid'
 
 "---------------------------------------------------------------------------
 " vim-quickrun
@@ -124,12 +122,13 @@ set backspace=indent,eol,start
 set ignorecase
 set smartcase
 set directory-=.
+set autoread
+set showcmd
 
 " grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
 " ファイルを開くたびに、そのファイルのディレクトリに移動する
 autocmd BufEnter * execute ":lcd " . expand("%:p:h")
-
 
 " # の行で改行したときなどに # をつけないように
 autocmd FileType * setlocal formatoptions-=r
@@ -187,7 +186,13 @@ map <silent> [Tag]p :tabprevious<CR>
 "---------------------------------------------------------------------------
 " lightline.vim
 "---------------------------------------------------------------------------
-let g:lightline = {
+ let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ }
-
+ 
+"---------------------------------------------------------------------------
+" vim-hybrid
+"---------------------------------------------------------------------------
+let g:hybrid_use_Xresources = 1
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
