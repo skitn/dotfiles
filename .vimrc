@@ -124,11 +124,14 @@ set smartcase
 set directory-=.
 set autoread
 set showcmd
+set incsearch
+set hlsearch
+set smartindent
 
 " grep,vimgrep,Ggrep時にquickfix-windowを開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
 " ファイルを開くたびに、そのファイルのディレクトリに移動する
-autocmd BufEnter * execute ":lcd " . expand("%:p:h")
+" autocmd BufEnter * execute ":lcd " . expand("%:p:h")
 
 " # の行で改行したときなどに # をつけないように
 autocmd FileType * setlocal formatoptions-=r
