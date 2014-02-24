@@ -30,6 +30,11 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'vim-scripts/tagbar-phpctags', {
+  \   'build' : {
+  \     'others' : 'chmod +x bin/phpctags',
+  \   },
+  \ }
 
 "---------------------------------------------------------------------------
 " vim-quickrun
@@ -70,9 +75,14 @@ set splitbelow
 nmap <Leader>r <plug>(quickrun)
 
 "---------------------------------------------------------------------------
-" neocomplcache
+" neocomplete
 "---------------------------------------------------------------------------
 let g:neocomplete#enable_at_startup = 1
+
+"---------------------------------------------------------------------------
+" tagbar-phpctags
+"---------------------------------------------------------------------------
+let g:tagbar_phpctags_bin = 'phpctags/build/phpctags.phar'
 
 "---------------------------------------------------------------------------
 " neosnippet
