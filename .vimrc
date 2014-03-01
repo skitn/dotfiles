@@ -1,4 +1,4 @@
-" vi との互換性OFF  
+" vi との互換性OFF
 set nocompatible
 filetype off
 
@@ -13,7 +13,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete.git' 
+NeoBundle 'Shougo/neocomplete.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/vimproc.git'
@@ -120,6 +120,19 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 syntax on
 " ファイル形式検出、プラグイン、インデントを ON
 filetype plugin indent on
+" ファイルタイプ別 {{{
+autocmd FileType html       setlocal sw=2 sts=2 ts=2 et
+autocmd FileType xhtml      setlocal sw=2 sts=2 ts=2 et
+autocmd FileType javascript setlocal sw=2 sts=2 ts=2 et
+autocmd FileType css        setlocal sw=2 sts=2 ts=2 et
+autocmd FileType php        setlocal sw=4 sts=4 ts=4 et
+autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
+autocmd FileType sql        setlocal sw=4 sts=4 ts=4 et
+autocmd FileType yaml       setlocal sw=2 sts=2 ts=2 et
+autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
+autocmd FileType sh         setlocal sw=4 sts=4 ts=4 et
+autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
+" }}}
 
 set tabstop=4
 set shiftwidth=4
@@ -146,6 +159,18 @@ autocmd QuickFixCmdPost *grep* cwindow
 " # の行で改行したときなどに # をつけないように
 autocmd FileType * setlocal formatoptions-=r
 autocmd FileType * setlocal formatoptions-=o
+
+" 保存時に行末の空白を削除
+function! s:remove_dust()
+    let cursor = getpos(".")
+    %s/\s\+$//ge
+    %s/\t/  /ge
+    call setpos(".", cursor)
+    unlet cursor
+endfunction
+autocmd BufWritePre * call <SID>remove_dust()
+
+
 
 "---------------------------------------------------------------------------
 " tab setting
@@ -202,7 +227,7 @@ map <silent> [Tag]p :tabprevious<CR>
  let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ }
- 
+
 "---------------------------------------------------------------------------
 " vim-hybrid
 "---------------------------------------------------------------------------
