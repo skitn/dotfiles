@@ -18,6 +18,7 @@ NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'vim-scripts/surround.vim'
@@ -170,6 +171,8 @@ function! s:remove_dust()
 endfunction
 autocmd BufWritePre * call <SID>remove_dust()
 
+" ctags
+set tags=./.tags,./../.tags,./*/.tags,./../../.tags,./../../../.tags,./../../../../.tags,./../../../../../.tags
 
 
 "---------------------------------------------------------------------------
@@ -224,7 +227,7 @@ map <silent> [Tag]p :tabprevious<CR>
 "---------------------------------------------------------------------------
 " lightline.vim
 "---------------------------------------------------------------------------
- let g:lightline = {
+let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ }
 
