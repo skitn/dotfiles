@@ -138,9 +138,6 @@ autocmd FileType sh         setlocal sw=4 sts=4 ts=4 et
 autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
 " }}}
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set number
 set laststatus=2
 set t_Co=256
@@ -164,15 +161,15 @@ autocmd QuickFixCmdPost *grep* cwindow
 autocmd FileType * setlocal formatoptions-=r
 autocmd FileType * setlocal formatoptions-=o
 
-" 保存時に行末の空白を削除
-function! s:remove_dust()
+" 保存時に行末の空白削除およびタブを空白に変換する
+function! s:remove_dust(replace_space_str)
     let cursor = getpos(".")
     %s/\s\+$//ge
-    %s/\t/  /ge
+    execute '%s/\t/'.a:replace_space_str.'/ge'
     call setpos(".", cursor)
     unlet cursor
 endfunction
-autocmd BufWritePre * call <SID>remove_dust()
+autocmd BufWritePre *.php call <SID>remove_dust('    ')
 
 " ctags
 set tags=./.tags,./../.tags,./*/.tags,./../../.tags,./../../../.tags,./../../../../.tags,./../../../../../.tags
