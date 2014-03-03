@@ -169,11 +169,18 @@ function! s:remove_dust(replace_space_str)
     call setpos(".", cursor)
     unlet cursor
 endfunction
-autocmd BufWritePre *.php call <SID>remove_dust('    ')
+"autocmd BufWritePre *.php call <SID>remove_dust('    ')
 
 " ctags
 set tags=./.tags,./../.tags,./*/.tags,./../../.tags,./../../../.tags,./../../../../.tags,./../../../../../.tags
 
+" vimgrep
+nnoremap [q :cprevious<CR>   " 前へ
+nnoremap ]q :cnext<CR>       " 次へ
+nnoremap [Q :<C-u>cfirst<CR> " 最初へ
+nnoremap ]Q :<C-u>clast<CR>  " 最後へ
+
+nnoremap qq :q!<CR> " 保存せずに閉じる
 
 "---------------------------------------------------------------------------
 " tab setting

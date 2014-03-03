@@ -7,7 +7,7 @@ setopt auto_cd
 setopt auto_pushd
 setopt correct
 
-#bindkey -v                        
+# bindkey -v                        
 
 autoload -U compinit
 compinit
