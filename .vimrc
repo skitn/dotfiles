@@ -20,6 +20,9 @@ NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neomru.vim', {
+  \ 'depends' : 'Shougo/unite.vim'
+  \ }
 NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'wesleyche/Trinity.git'

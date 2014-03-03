@@ -1,4 +1,5 @@
-PS1="[%T]%(!.#.$) " 
+PS1="[%T]%(!.#.$) "
+RPROMPT=$GREEN'[%~]'$WHITE
 setopt transient_rprompt 
 
 setopt auto_list
