@@ -8,7 +8,6 @@ setopt auto_pushd
 setopt correct
 
 # bindkey -v                        
-
 autoload -U compinit
 compinit
 
@@ -24,6 +23,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups
 setopt share_history
+
+zstyle ':completion:*:processes' command 'ps x'
+zstyle ':completion:*:default' menu select=1
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+autoload -U predict-on
 
 # private setting
 ZDOTDIR=$HOME
