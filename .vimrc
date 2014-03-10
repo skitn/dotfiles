@@ -34,6 +34,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'vim-scripts/tagbar-phpctags', {
   \   'build' : {
   \     'others' : 'chmod +x bin/phpctags',
