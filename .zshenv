@@ -3,6 +3,7 @@ export EDITOR=vim
 
 if which brew &> /dev/null; then
   export PATH="$(brew --prefix)/bin:/usr/local/bin:$PATH"
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 else
   export PATH="/usr/local/bin:$PATH"
 fi
