@@ -36,6 +36,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'gcmt/wildfire.vim'
+NeoBundle 'scrooloose/syntastic'
 
 "---------------------------------------------------------------------------
 " editor setting

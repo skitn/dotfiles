@@ -50,6 +50,12 @@ imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<P
 smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "---------------------------------------------------------------------------
+" syntastic
+"---------------------------------------------------------------------------
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 2
+
+"---------------------------------------------------------------------------
 " unite
 "---------------------------------------------------------------------------
 " 入力モードで開始する
