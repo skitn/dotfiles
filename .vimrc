@@ -45,10 +45,9 @@ syntax on
 " ファイル形式検出、プラグイン、インデントを ON
 filetype plugin indent on
 " ファイルタイプ別 {{{
-autocmd FileType html       setlocal sw=2 sts=2 ts=2 et
-autocmd FileType xhtml      setlocal sw=2 sts=2 ts=2 et
+"autocmd FileType html       setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript setlocal sw=2 sts=2 ts=2 et
-autocmd FileType css        setlocal sw=2 sts=2 ts=2 et
+"autocmd FileType css        setlocal sw=2 sts=2 ts=2 et
 autocmd FileType php        setlocal sw=4 sts=4 ts=4 et
 autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
 autocmd FileType sql        setlocal sw=4 sts=4 ts=4 et
@@ -59,6 +58,7 @@ autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
 " }}}
 
 set number
+set ruler
 set laststatus=2
 set t_Co=256
 set mouse=a
@@ -148,7 +148,18 @@ map <silent> [Tag]x :tabclose<CR>
 " tx タブを閉じる
 map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
-map <silent> [Tag]p :tabprevious<CR>
+map <silent> [Tag]p :tabprevious<CR> 
 " tp 前のタブ
+
+"---------------------------------------------------------------------------
+" タブスペース系
+"---------------------------------------------------------------------------
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 
 source ~/.vimrc.bundles
