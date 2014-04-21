@@ -58,8 +58,3 @@ setopt print_eight_bit
 # エイリアス
 alias ps="ps aux"
 alias c=clear
-
-# 固有の設定
-ZDOTDIR=$HOME
-export ZDOTDIR
-[ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local

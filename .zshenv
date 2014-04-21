@@ -1,6 +1,10 @@
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
 
+ZDOTDIR=$HOME
+export ZDOTDIR
+[ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
+
 if which brew &> /dev/null; then
   export PATH="$(brew --prefix)/bin:/usr/local/bin:$PATH"
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
