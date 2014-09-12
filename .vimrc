@@ -162,4 +162,10 @@ au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 
+"---------------------------------------------------------------------------
+" コピペ系
+"---------------------------------------------------------------------------
+set clipboard+=unnamed
+set clipboard+=autoselect
+
 source ~/.vimrc.bundles
