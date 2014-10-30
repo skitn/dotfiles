@@ -1,8 +1,8 @@
 # Ctrl+wで直前の/までを削除する
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-# viライクなキーバインド
-bindkey -v
+# キーバインド
+bindkey -e
 
 # プロンプトの設定
 autoload colors
