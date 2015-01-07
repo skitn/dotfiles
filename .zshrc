@@ -79,6 +79,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# プロンプトの設定
+autoload colors
+colors
+RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+setopt transient_rprompt
+
 # 補完機能
 setopt auto_cd
 setopt auto_pushd
