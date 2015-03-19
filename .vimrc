@@ -14,6 +14,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.git'
+NeoBundle 'violetyk/neocomplete-php.vim'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
