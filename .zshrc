@@ -133,3 +133,11 @@ setopt print_eight_bit
 alias ps="ps aux"
 alias c=clear
 alias vim="reattach-to-user-namespace vim"
+
+# peco
+function peco-lscd {
+    local dir="$( find . -maxdepth 1 -type d | sed -e 's;\./;;' | peco )"
+    if [ ! -z "$dir" ] ; then
+        cd "$dir"
+    fi
+}

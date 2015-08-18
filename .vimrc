@@ -40,6 +40,8 @@ NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'rking/ag.vim'
 "NeoBundle 'alpaca-tc/alpaca_tags'
+NeoBundle 'terryma/vim-multiple-cursors'
+
 NeoBundleLazy 'alpaca-tc/alpaca_tags', {
               \    'depends': ['Shougo/vimproc'],
               \    'autoload' : {
