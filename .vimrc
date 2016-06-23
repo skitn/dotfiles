@@ -28,11 +28,8 @@ NeoBundle 'Shougo/neomru.vim', {
   \ }
 NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'wesleyche/SrcExpl.git'
-NeoBundle 'wesleyche/Trinity.git'
 NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'w0ng/vim-hybrid'
