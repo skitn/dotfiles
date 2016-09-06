@@ -21,13 +21,10 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neomru.vim', {
   \ 'depends' : 'Shougo/unite.vim'
   \ }
 NeoBundle 'vim-scripts/surround.vim'
-NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'

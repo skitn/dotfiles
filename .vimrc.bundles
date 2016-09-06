@@ -126,8 +126,6 @@ let g:alpaca_tags#config = {
        \ 'vim' : '--languages=+Vim,vim',
        \ 'php' : '--languages=+php',
        \ 'ruby': '--languages=+Ruby',
-       \ 'coffee': '--languages=+coffee',
-       \ '-coffee': '--languages=-coffee',
        \ 'bundle': '--languages=+Ruby',
        \ }
 
