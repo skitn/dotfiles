@@ -14,8 +14,8 @@ coreutils
 $ git clone https://github.com/skitn/dotfiles.git  
 $ cd dotfiles  
 $ git submodule update -i  
-$ ln -s `pwd`/{.zshenv,.zshrc,.tmux.conf,.vim,.vimrc,.vimrc.bundles} ~/
+$ ln -s `pwd`/{.zshenv,.zshrc,.tmux.conf,.vim,.vimrc,.vimrc.plugins} ~/
 $ export TERM=xterm-256color 
 ```
 
-And do `:NeoBundleInstall` in vim
+And do `:PlugInstall` in vim
