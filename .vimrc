@@ -16,7 +16,7 @@ Plug 'violetyk/neocomplete-php.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/vimproc.git'
+Plug 'Shougo/vimproc'
 Plug 'Shougo/unite.vim'
 Plug 'tsukkee/unite-tag'
 Plug 'Shougo/neomru.vim' | Plug 'Shougo/unite.vim'
@@ -30,7 +30,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'scrooloose/syntastic'
 Plug 'rking/ag.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'alpaca-tc/alpaca_tags' | Plug 'Shougo/vimproc'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "---------------------------------------------------------------------------
@@ -87,7 +87,7 @@ endfunction
 "autocmd BufWritePre *.php call <SID>remove_dust('    ')
 
 " ctags
-"set tags=./.tags,./../.tags,./*/.tags,./../../.tags,./../../../.tags,./../../../../.tags,./../../../../../.tags
+set tags=.git/tags,./.tags,./../.tags,./*/.tags,./../../.tags,./../../../.tags,./../../../../.tags,./../../../../../.tags
 
 " vimgrep
 nnoremap [q :cprevious<CR>   " 前へ

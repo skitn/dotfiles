@@ -118,27 +118,6 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 "---------------------------------------------------------------------------
-" alpaca_ctags
-"---------------------------------------------------------------------------
-let g:alpaca_tags#config = {
-       \ '_' : '-R --sort=yes --languages=+php --languages=-js,JavaScript',
-       \ 'js' : '--languages=+js',
-       \ 'vim' : '--languages=+Vim,vim',
-       \ 'php' : '--languages=+php',
-       \ 'ruby': '--languages=+Ruby',
-       \ 'bundle': '--languages=+Ruby',
-       \ }
-
-augroup AlpacaTags
-  autocmd!
-  if exists(':AlpacaTags')
-    autocmd BufWritePost Gemfile AlpacaTagsBundle
-    autocmd BufEnter * AlpacaTagsSet
-    autocmd BufWritePost * AlpacaTagsUpdate
-  endif
-augroup END
-
-"---------------------------------------------------------------------------
 " lightline.vim
 "---------------------------------------------------------------------------
 let g:lightline = {
