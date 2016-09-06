@@ -3,48 +3,79 @@ set nocompatible
 filetype off
 
 "---------------------------------------------------------------------------
+" vim-plug
+"---------------------------------------------------------------------------
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'Shougo/neocomplcache'
+Plug 'tpope/vim-surround'
+Plug 'altercation/vim-colors-solarized'
+Plug 'thinca/vim-quickrun'
+Plug 'Shougo/neocomplete'
+Plug 'violetyk/neocomplete-php.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
+Plug 'Shougo/vimproc.git'
+Plug 'Shougo/unite.vim'
+Plug 'tsukkee/unite-tag'
+Plug 'Shougo/neomru.vim' | Plug 'Shougo/unite.vim'
+Plug 'vim-scripts/surround.vim'
+Plug 'vim-scripts/taglist.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'thinca/vim-qfreplace'
+Plug 'w0ng/vim-hybrid'
+Plug 'gcmt/wildfire.vim'
+Plug 'scrooloose/syntastic'
+Plug 'rking/ag.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'alpaca-tc/alpaca_tags' | Plug 'Shougo/vimproc'
+call plug#end()
+
+"---------------------------------------------------------------------------
 " NeoBundle
 "---------------------------------------------------------------------------
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete.git'
-NeoBundle 'violetyk/neocomplete-php.vim'
-NeoBundle 'Shougo/neosnippet.git'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'Shougo/vimproc.git'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'Shougo/neomru.vim', {
-  \ 'depends' : 'Shougo/unite.vim'
-  \ }
-NeoBundle 'vim-scripts/surround.vim'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'gcmt/wildfire.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'terryma/vim-multiple-cursors'
-
-NeoBundleLazy 'alpaca-tc/alpaca_tags', {
-              \    'depends': ['Shougo/vimproc'],
-              \    'autoload' : {
-              \       'commands' : [
-              \          { 'name' : 'AlpacaTagsBundle', 'complete': 'customlist,alpaca_tags#complete_source' },
-              \          { 'name' : 'AlpacaTagsUpdate', 'complete': 'customlist,alpaca_tags#complete_source' },
-              \          'AlpacaTagsSet', 'AlpacaTagsCleanCache', 'AlpacaTagsEnable', 'AlpacaTagsDisable', 'AlpacaTagsKillProcess', 'AlpacaTagsProcessStatus',
-              \       ],
-              \    }
-              \ }
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"endif
+"
+"call neobundle#rc(expand('~/.vim/bundle/'))
+"
+"NeoBundle 'thinca/vim-quickrun.git'
+"NeoBundle 'Shougo/neobundle.vim'
+"NeoBundle 'Shougo/neocomplete.git'
+"NeoBundle 'violetyk/neocomplete-php.vim'
+"NeoBundle 'Shougo/neosnippet.git'
+"NeoBundle 'Shougo/neosnippet-snippets'
+"NeoBundle 'honza/vim-snippets'
+"NeoBundle 'Shougo/vimproc.git'
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'tsukkee/unite-tag'
+"NeoBundle 'Shougo/neomru.vim', {
+"  \ 'depends' : 'Shougo/unite.vim'
+"  \ }
+"NeoBundle 'vim-scripts/surround.vim'
+"NeoBundle 'vim-scripts/taglist.vim'
+"NeoBundle 'itchyny/lightline.vim'
+"NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'thinca/vim-qfreplace'
+"NeoBundle 'w0ng/vim-hybrid'
+"NeoBundle 'gcmt/wildfire.vim'
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'rking/ag.vim'
+"NeoBundle 'terryma/vim-multiple-cursors'
+"
+"NeoBundleLazy 'alpaca-tc/alpaca_tags', {
+"              \    'depends': ['Shougo/vimproc'],
+"              \    'autoload' : {
+"              \       'commands' : [
+"              \          { 'name' : 'AlpacaTagsBundle', 'complete': 'customlist,alpaca_tags#complete_source' },
+"              \          { 'name' : 'AlpacaTagsUpdate', 'complete': 'customlist,alpaca_tags#complete_source' },
+"              \          'AlpacaTagsSet', 'AlpacaTagsCleanCache', 'AlpacaTagsEnable', 'AlpacaTagsDisable', 'AlpacaTagsKillProcess', 'AlpacaTagsProcessStatus',
+"              \       ],
+"              \    }
+"              \ }
 "---------------------------------------------------------------------------
 " editor setting
 "---------------------------------------------------------------------------
