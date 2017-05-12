@@ -5,11 +5,10 @@ ZDOTDIR=$HOME
 export ZDOTDIR
 [ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
 
+
 export PATH="/usr/local/bin:$PATH"
-if which brew &> /dev/null; then
-  export PATH="$(brew --prefix)/bin:$PATH"
-  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-fi
+export PATH="$(~/homebrew/bin/brew --prefix)/bin:$PATH"
+export PATH="$(~/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 export SHELL=/bin/zsh tmux
 
