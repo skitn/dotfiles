@@ -5,6 +5,7 @@ ZDOTDIR=$HOME
 export ZDOTDIR
 [ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
 
+
 export PATH="/usr/local/bin:$PATH"
 if which brew &> /dev/null; then
   export PATH="$(brew --prefix)/bin:$PATH"
