@@ -9,6 +9,8 @@ export PATH="/usr/local/bin:$PATH"
 if which brew &> /dev/null; then
   export PATH="$(brew --prefix)/bin:$PATH"
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  export GOPATH=$HOME/dev
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 export SHELL=/bin/zsh tmux
