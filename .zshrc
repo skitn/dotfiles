@@ -50,6 +50,7 @@ plugins=(git brew)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.rbenv/shims:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -63,6 +64,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+eval "$(direnv hook zsh)"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -152,3 +154,5 @@ function peco-src() {
     zle -R -c
 }
 zle -N peco-src
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
