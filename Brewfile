@@ -1,2 +1,6 @@
 tap "homebrew/bundle"
+brew "coreutils"
+brew "direnv"
+brew "jq"
+brew "mkcert"
 brew "php@8.1"
