@@ -6,7 +6,7 @@ dotfiles
 tmux  
 zsh  
 vim（バージョン：7.3.885以上で、if_luaが使えること）   
-coreutils
+coreutils  
 direnv
 
 インストール方法
