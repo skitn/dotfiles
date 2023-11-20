@@ -154,5 +154,4 @@ function peco-src() {
     zle -R -c
 }
 zle -N peco-src
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH

@@ -6,7 +6,7 @@ export ZDOTDIR
 [ -f $ZDOTDIR/.zshrc_local ] && . $ZDOTDIR/.zshrc_local
 
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 if which brew &> /dev/null; then
   export PATH="$(brew --prefix)/bin:$PATH"
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -14,11 +14,7 @@ if which brew &> /dev/null; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-export SHELL=/bin/zsh tmux
-
 # alias
 alias ll='ls -l'
 alias vi=vim
-alias tma='tmux attach'
-alias tml='tmux ls'
 alias c='clear'
