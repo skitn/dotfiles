@@ -134,7 +134,6 @@ setopt print_eight_bit
 # エイリアス
 alias ps="ps aux"
 alias c=clear
-alias vim="reattach-to-user-namespace vim"
 
 # peco
 function peco-lscd {
